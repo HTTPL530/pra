@@ -1,3 +1,13 @@
+CREATE TABLE reservations (
+    id SERIAL PRIMARY KEY,          -- Уникальный идентификатор записи
+    reservation_date DATE NOT NULL, -- Дата бронирования
+    reservation_time TIME NOT NULL,  -- Время бронирования
+    guest_count INT NOT NULL,        -- Количество гостей
+    phone VARCHAR(15) NOT NULL       -- Телефонный номер
+);
+
+ALTER TABLE publiс.reservations
+ADD COLUMN status VARCHAR(20) DEFAULT 'новая';
 <?php
 $errors = [];
 
